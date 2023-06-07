@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hsbc.dao.CustomerRepository;
+import com.hsbc.enums.AccountType;
 import com.hsbc.model.Customer;
 import com.hsbc.service.CustomerService;
 
@@ -17,15 +18,15 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public Customer saveCustomer(Customer customer) {
-		Customer customer2;
+		Customer customer2 = null;
 		if(!Objects.isNull(customer)) {
 			int amount = Integer.parseInt(customer.getAmount());
 			if(amount >= 500) {
+				customer.setAccountType(customer.getAccountNumber()==0 ? AccountType.Savings : AccountType.Current); 
 				customer2 = customerRepository.save(customer);
 			}
-			
 		}
-		return ;
+		return customer2;
 	}
 
 	@Override

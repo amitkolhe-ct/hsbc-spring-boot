@@ -25,6 +25,7 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long accountNumber;
+	
 	private AccountType accountType;
 	
 	@NotNull(message = "Firstname cannot be null")
@@ -53,14 +54,28 @@ public class Customer {
 	private Timestamp birthDate;
 	
 	@Size(max = 10, message = "PAN number must have upto 10 character")
+	@NotNull(message = "PAN number cannot be null")
+	@Column(nullable = false)
 	private String pan;
+	
+	@Size(max = 12, message = "Aadhar number must have upto 12 character")
+	@NotNull(message = "Aadhar number cannot be null")
+	@Column(nullable = false)
 	private String aadhar;
+	
+	@Size(max = 1, message = "Gender must have 1 character")
 	private String gender;
+	
+	
 	private String amount;
 	private String maritalStatus;
+	
+	@Size(max = 10, message = "Contact number must have upto 10 digite")
+	@Column(nullable = false)
 	private String contact;
+	
 	@OneToOne(cascade = CascadeType.ALL)
-	private Address address;
+	private Address addressKey;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private String createdAt;
