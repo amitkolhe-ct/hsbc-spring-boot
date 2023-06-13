@@ -1,0 +1,23 @@
+{
+    "accountType": "0",
+    "firstName": "Narendra",
+    "lastName": "modi",
+    "fatherName": "damodardas",
+    "motherName": "hiraben",
+    "dob": "01/01/1950",
+    "pan": "ABCDE19500",
+    "aadhar": "1234567891011",
+    "gender": "Male",
+    "amount": "500",
+    "maritalStatus": "unmarried",
+    "contact": "10987654321",
+	
+    "address": {
+		"street1" : "A-1, 409",
+		"street2" : "Guruprasad homes",
+        "city": "pune",
+        "state": "maharastra",
+        "country": "india",
+		"zip" : "123456"
+    }
+}
