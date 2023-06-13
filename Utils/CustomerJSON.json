@@ -1,18 +1,19 @@
 {
-    "accountType": "0",
+    "accountType": "Savings",
     "firstName": "Narendra",
     "lastName": "modi",
     "fatherName": "damodardas",
     "motherName": "hiraben",
-    "dob": "01/01/1950",
+    "emailAddress":"modi@gmai.com",
+    "birthDate": "01-01-1950",
     "pan": "ABCDE19500",
-    "aadhar": "1234567891011",
-    "gender": "Male",
+    "aadhar": "123456789101",
+    "gender": "M",
     "amount": "500",
     "maritalStatus": "unmarried",
-    "contact": "10987654321",
+    "contact": "1234567890",
 	
-    "address": {
+    "addressKey": {
 		"street1" : "A-1, 409",
 		"street2" : "Guruprasad homes",
         "city": "pune",
